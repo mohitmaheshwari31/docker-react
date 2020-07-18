@@ -4,7 +4,7 @@ services:
 
 
 before_install:
-        - docker build -t mohitm/docker-react .
+        - docker build -t mohitm/docker-react -f Dockerfile.dev .
 
 script:
         - docker run mohitm/docker-react npm run test -- --coverage
